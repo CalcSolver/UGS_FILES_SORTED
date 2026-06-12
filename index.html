@@ -2,8 +2,12 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <!-- always add this to your website or users will not be happy-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--if you are ever using this in school this is not a good title(and also include a favicon)-->
   <title>OK123 Games</title>
   <style>
+    /*The CSS can be a little better and also uses vars*/
     body {
       font-family: Arial, sans-serif;
       background: #f5f5f5;
@@ -33,16 +37,53 @@
   </style>
 </head>
 <body>
-
+<!-- you can customize the body a lot if you ever need help you can go to my neocities page or any other resources on the indie web:3-->
 <h1>OK123 Game Launcher</h1>
-
 <!-- ⭐ Add your pages here -->
-<a class="btn" href="G/clgolforbit.html">Play clgolforbit</a>
+<a class="btn" href="G/clgolforbit.html">Play golforbit</a>
+  <!--add a launch in full screen button also-->
+<!-- create the anothergame file!!!!!!-->
 <a class="btn" href="G/anothergame.html">Another Game</a>
-<a class="btn" href="test.html">Test Page</a>
-<a class="btn" href="G/cgranny.html">Play Granny
-  
-<p>Add more buttons by copying the lines above.</p>
+  <!--you can add this file internally but since I made this to work at school I had to use external URLs-->
+<a class="btn" href="https://rawcdn.githack.com/entraptadoeztech/UGS_FILES_SORTED/refs/heads/main/safehaven-login.html">Game Hub Login</a>
+<!-- fixed your mistake thank me later!-->                                                                                                                           
+<a class="btn" href="G/clgranny.html">Play Granny</a>
+  <br>
+  <!-- if you want to add more fullscreen buttons change the id name of each button then replace the name at the end of the JS script-->
+  <button id="embedButton">Open Granny in Fullscreen</button>
 
+    <script>
+        // Function to open a new tab with the iframe
+        function openEmbed() {
+            // Create a new window/tab
+            var newWindow = window.open('about:blank');
+
+            // Create an iframe element
+            var iframe = document.createElement('iframe');
+
+            // Set the source URL for the iframe
+            iframe.src = 'G/clgranny.html';
+
+            // Set iframe attributes to cover the entire page
+            iframe.style.position = 'absolute';
+            iframe.style.top = '0';
+            iframe.style.left = '0';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.border = 'none';
+
+            // Append the iframe to the new window's document
+            newWindow.document.body.appendChild(iframe);
+
+            // Change the tab title
+            newWindow.document.title = 'Clever | Portal';
+        }
+
+        // Add a click event listener to the button
+        document.getElementById('embedButton').addEventListener('click', openEmbed);
+    </script>
+  <br>
+<h1>Other Tools</h1>
+  <a class="btn" href="G/GUST-launcher.html">browser!</a>
 </body>
 </html>
